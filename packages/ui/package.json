@@ -16,7 +16,9 @@
     "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
     "typecheck": "tsc --noEmit",
     "lint": "eslint src/",
-    "test": "jest"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci"
   },
   "jest": {
     "preset": "jest-presets/jest/browser"

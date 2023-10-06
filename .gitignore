@@ -1,12 +1,48 @@
-.DS_Store
+# dependencies
 node_modules
-.turbo
-*.log
+.pnp
+.pnp.js
+
+# testing
+coverage
+
+# next.js
 .next
+out
+
+# production
+build
 dist
 dist-ssr
-*.local
-.env
-.cache
 server/dist
 public/dist
+
+# misc
+.DS_Store
+*.pem
+
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# turbo
+.turbo
+*.log
+.cache
+
+# IDE
+.idea
+.idea/*

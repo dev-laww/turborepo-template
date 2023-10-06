@@ -1,4 +1,4 @@
-const { resolve } = require("node:path");
+const {resolve} = require("node:path");
 
 const project = resolve(process.cwd(), "tsconfig.json");
 
@@ -12,35 +12,35 @@ const project = resolve(process.cwd(), "tsconfig.json");
  */
 
 module.exports = {
-  extends: [
-    "@vercel/style-guide/eslint/node",
-    "@vercel/style-guide/eslint/typescript",
-  ].map(require.resolve),
-  parserOptions: {
-    project,
-  },
-  env: {
-    node: true,
-    es6: true,
-  },
-  settings: {
-    "import/resolver": {
-      typescript: {
+    extends: [
+        "@vercel/style-guide/eslint/node",
+        "@vercel/style-guide/eslint/typescript",
+    ].map(require.resolve),
+    parserOptions: {
         project,
-      },
     },
-  },
-  overrides: [
-    {
-      files: ["**/__tests__/**/*"],
-      env: {
-        jest: true,
-      },
+    env: {
+        node: true,
+        es6: true,
     },
-  ],
-  ignorePatterns: ["node_modules/", "dist/"],
-  // add rules configurations here
-  rules: {
-    "import/no-default-export": "off",
-  },
+    settings: {
+        "import/resolver": {
+            typescript: {
+                project,
+            },
+        },
+    },
+    overrides: [
+        {
+            files: ["**/__tests__/**/*"],
+            env: {
+                jest: true,
+            },
+        },
+    ],
+    ignorePatterns: ["node_modules/", "dist/"],
+    // add rules configurations here
+    rules: {
+        "import/no-default-export": "off",
+    },
 };
